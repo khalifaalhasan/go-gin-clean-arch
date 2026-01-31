@@ -42,21 +42,44 @@ Server will run on http://localhost:8080.
 
 ## 📂 Project Structure
 
+
 ```
-├── 📁 cmd
-│   └── 📁 api
-│       └── 🐹 main.go
-├── 📁 internal
-│   ├── 📁 config
-│   ├── 📁 handler
-│   │   └── 🐹 comment_handler.go
-│   ├── 📁 middleware
-│   │   └── 🐹 ratelimit.go
-│   ├── 📁 model
-│   │   └── 🐹 comment.go
-│   └── 📁 service
-│       └── 🐹 security_service.go
-├── 📝 README.md
-├── 📄 go.mod
-└── 📄 go.sum
+├── 📁 api
+│   ├── 📁 cmd
+│   │   └── 📁 api
+│   │       └── 🐹 main.go
+│   ├── 📁 internal
+│   │   ├── 📁 config
+│   │   ├── 📁 handler
+│   │   │   └── 🐹 comment_handler.go
+│   │   ├── 📁 middleware
+│   │   │   └── 🐹 ratelimit.go
+│   │   ├── 📁 model
+│   │   │   └── 🐹 comment.go
+│   │   └── 📁 service
+│   │       └── 🐹 security_service.go
+│   ├── 📄 go.mod
+│   └── 📄 go.sum
+├── 📁 web
+│   ├── 📁 public
+│   │   ├── 🖼️ file.svg
+│   │   ├── 🖼️ globe.svg
+│   │   ├── 🖼️ next.svg
+│   │   ├── 🖼️ vercel.svg
+│   │   └── 🖼️ window.svg
+│   ├── 📁 src
+│   │   └── 📁 app
+│   │       ├── 📄 favicon.ico
+│   │       ├── 🎨 globals.css
+│   │       ├── 📄 layout.tsx
+│   │       └── 📄 page.tsx
+│   ├── ⚙️ .gitignore
+│   ├── 📄 eslint.config.mjs
+│   ├── 📄 next-env.d.ts
+│   ├── 📄 next.config.ts
+│   ├── ⚙️ package-lock.json
+│   ├── ⚙️ package.json
+│   ├── 📄 postcss.config.mjs
+│   └── ⚙️ tsconfig.json
+└── 📝 README.md
 ```
