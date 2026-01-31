@@ -1,0 +1,49 @@
+# --- OS & Editor Files (Sampah Sistem) ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# --- DOCKER DATA (WAJIB IGNORE) ---
+# Jangan pernah commit data database/storage!
+docker-data/
+
+# --- ENVIRONMENT VARIABLES (RAHASIA) ---
+.env
+.env.*
+!.env.example
+
+# --- API (GOLANG) ---
+# Binary hasil build (biasanya namanya 'main' atau sama dengan folder)
+api/main
+api/*.exe
+api/*.test
+api/debug
+
+# Dependency vendor (kecuali memang mau commit vendor)
+api/vendor/
+
+# Coverage profile
+api/*.out
+
+# --- WEB (NEXT.JS & NODE) ---
+# Folder keramat node_modules (SUPER BERAT)
+web/node_modules/
+
+# Build output Next.js
+web/.next/
+web/out/
+web/build/
+web/dist/
+
+# Next.js generated types
+web/next-env.d.ts
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Vercel
+.vercel

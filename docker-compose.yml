@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # 🐘 PostgreSQL
+  postgres:
+    image: postgres:16-alpine
+    container_name: go_postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: go_gin_db
+    volumes:
+      # Tambahkan :Z di sini
+      - ./docker-data/postgres:/var/lib/postgresql/data:Z
+
+  # ⚡ Redis
+  redis:
+    image: redis:7-alpine
+    container_name: go_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      # Tambahkan :Z di sini
+      - ./docker-data/redis:/data:Z
+
+  # 🗄️ MinIO
+  minio:
+    image: minio/minio:latest
+    container_name: go_minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      # Tambahkan :Z di sini
+      - ./docker-data/minio:/data:Z
