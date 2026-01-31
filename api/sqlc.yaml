@@ -1,0 +1,9 @@
+version: "2"
+sql:
+  - schema: "db/migration"  # Pastikan folder api/db/migration ada
+    queries: "db/query"     # Pastikan folder api/db/query ada
+    engine: "postgresql"
+    gen:
+      go:
+        package: "database"
+        out: "internal/database"
