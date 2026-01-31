@@ -16,3 +16,12 @@ type Comment struct {
 	IsHidden  bool
 	CreatedAt time.Time
 }
+
+type User struct {
+	ID        int64
+	Username  string
+	Password  string
+	FullName  string
+	Email     string
+	CreatedAt time.Time
+}
