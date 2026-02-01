@@ -44,7 +44,7 @@ Server will run on http://localhost:8080.
 
 
 ```
-├── 📁 api
+├── 📁 api                                           #Backend
 │   ├── 📁 cmd
 │   │   └── 📁 api
 │   │       └── 🐹 main.go
@@ -60,7 +60,7 @@ Server will run on http://localhost:8080.
 │   │       └── 🐹 security_service.go
 │   ├── 📄 go.mod
 │   └── 📄 go.sum
-├── 📁 web
+├── 📁 web                                           #Frontend
 │   ├── 📁 public
 │   │   ├── 🖼️ file.svg
 │   │   ├── 🖼️ globe.svg
