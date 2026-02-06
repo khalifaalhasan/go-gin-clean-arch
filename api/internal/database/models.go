@@ -5,7 +5,10 @@
 package database
 
 import (
+	"database/sql"
 	"time"
+
+	"github.com/sqlc-dev/pqtype"
 )
 
 type Comment struct {
@@ -15,6 +18,31 @@ type Comment struct {
 	IpAddress string
 	IsHidden  bool
 	CreatedAt time.Time
+}
+
+type IdempotencyKey struct {
+	Key          string
+	UserID       int64
+	ResponseCode sql.NullInt32
+	ResponseBody pqtype.NullRawMessage
+	CreatedAt    time.Time
+}
+
+type Order struct {
+	ID        int64
+	UserID    int64
+	ProductID int64
+	Amount    int32
+	CreatedAt time.Time
+}
+
+type Product struct {
+	ID          int64
+	Name        string
+	Description sql.NullString
+	Price       string
+	Stock       int32
+	CreatedAt   time.Time
 }
 
 type User struct {
