@@ -9,11 +9,14 @@ Thumbs.db
 # Jangan pernah commit data database/storage!
 docker-data/
 
+
+
 # --- ENVIRONMENT VARIABLES (RAHASIA) ---
 .env
 .env.*
 !.env.example
 app.env
+api/tmp
 
 # --- API (GOLANG) ---
 # Binary hasil build (biasanya namanya 'main' atau sama dengan folder)
